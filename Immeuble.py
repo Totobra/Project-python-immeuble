@@ -4,6 +4,8 @@ from random import *
 colormode(255)
 hideturtle()
 
+def mega_giga_super_ultre_special_tera_kilo_peta_putain_ins()
+
 def carre(x,y,w,h,c):
     teleport(x,y)
     fillcolor(c)
