@@ -3,11 +3,14 @@ from random import *
 
 
 
-for i in range(4):
-    steps = int(random() * 100)
-    angle = int(random() * 360)
-    right(angle)uycjcjhc
-    fd(steps)
+def carre(x,y,w,h,c):
+    goto(x,y)
+    for _ in range(2):
+        forward(w)
+        left(90)
+        forward(h)
+        left(90)
+
 
 
 done()
