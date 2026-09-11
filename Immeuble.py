@@ -4,7 +4,21 @@ from random import *
 colormode(255)
 hideturtle()
 
-def mega_giga_super_ultre_special_tera_kilo_peta_putain_ins()
+def mega_giga_super_ultre_special_tera_kilo_peta_putain_ins():
+    ins = []
+    for i in range(4):
+        tac = []
+        for j in range(randint(1,5)):
+            if j == 0:
+                tac.append(randint(0,2))
+            else:
+                for i in range(3):
+                    tac.append(randint(0,2))
+        ins[i].append(tac)
+    print(ins)             
+    return None
+
+ins = mega_giga_super_ultre_special_tera_kilo_peta_putain_ins()
 
 def carre(x,y,w,h,c):
     teleport(x,y)
