@@ -10,7 +10,7 @@ def carre(x,y,w,h,c):
         left(90)
         forward(h)
         left(90)
-
+    return None
 
 
 done()
