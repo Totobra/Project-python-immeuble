@@ -32,10 +32,14 @@ def immeuble(x,y,c,ins):
         etage(x,y+60*i,c,ins)
     return None
 
-def cartier(x,y,c,ins)
+def cartier(x,y,c,ins):
+    for i in range(4):
+        immeuble(x+i*170,y,c[i],ins)
+    return None
 
-
-c = (randint(1,255),randint(1,255),randint(1,255))
-immeuble(-200,-80,c,4)
+c = []
+for i in range(4):
+    c.append((randint(1,255),randint(1,255),randint(1,255)))
+cartier(-200,-80,c,4)
 
 done()
