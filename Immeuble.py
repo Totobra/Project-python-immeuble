@@ -17,9 +17,8 @@ def mega_giga_super_ultre_special_tera_kilo_peta_putain_ins():
                 for i in range(3):
                     tic.append(randint(0,2))
             tac.append(tic)    
-        ins.append(tac)
-    print(ins)             
-    return None
+        ins.append(tac)  
+    return ins
 
 ins = mega_giga_super_ultre_special_tera_kilo_peta_putain_ins()
 
