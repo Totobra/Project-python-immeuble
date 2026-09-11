@@ -18,20 +18,24 @@ def carre(x,y,w,h,c):
 
 def fenetre(x,y):
     carre(x,y,30,30,(255,255,255))
+    return None
 
 def etage(x,y,c,p):
     carre(x,y,140,60,c)
     for i in range(3):
         if p != i : fenetre(x+15+40*i,y+20)
         else:None
+    return None
 
-def immeuble(x,y):
+def immeuble(x,y,c,ins):
     for i in range(4):
-        
+        etage(x,y+60*i,c,ins)
+    return None
 
+def cartier(x,y,c,ins)
 
 
 c = (randint(1,255),randint(1,255),randint(1,255))
-etage(-20,-80,c,1)
+immeuble(-200,-80,c,4)
 
 done()
