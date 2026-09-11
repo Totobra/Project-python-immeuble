@@ -1,9 +1,9 @@
 from turtle import *
-from random import random
+from random import *
 
 
 
-for i in range(100):
+for i in range(4):
     steps = int(random() * 100)
     angle = int(random() * 360)
     right(angle)
