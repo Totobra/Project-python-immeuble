@@ -25,10 +25,12 @@ def etage(x,y,c,p):
         if p != i : fenetre(x+15+40*i,y+20)
         else:None
 
-def immeuble
+def immeuble(x,y):
+    for i in range(4):
+        
 
-carre(20,40,30,-20,(12,68,240))
-fenetre(-60,60)
+
+
 c = (randint(1,255),randint(1,255),randint(1,255))
 etage(-20,-80,c,1)
 
