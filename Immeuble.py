@@ -2,7 +2,7 @@ from turtle import *
 from random import *
 
 colormode(255)
-
+hideturtle()
 
 def carre(x,y,w,h,c):
     teleport(x,y)
@@ -19,6 +19,17 @@ def carre(x,y,w,h,c):
 def fenetre(x,y):
     carre(x,y,30,30,(255,255,255))
 
+def etage(x,y,c,p):
+    carre(x,y,140,60,c)
+    for i in range(3):
+        if p != i : fenetre(x+15+40*i,y+20)
+        else:None
+
+def immeuble
+
 carre(20,40,30,-20,(12,68,240))
+fenetre(-60,60)
+c = (randint(1,255),randint(1,255),randint(1,255))
+etage(-20,-80,c,1)
 
 done()
