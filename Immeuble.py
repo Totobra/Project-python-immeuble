@@ -55,9 +55,15 @@ def cartier(x,y,c,ins):
         immeuble(x+i*170,y,c[i],ins,i)
     return None
 
-c = []
-for i in range(4):
-    c.append((randint(1,255),randint(1,255),randint(1,255)))
-cartier(-200,-80,c,ins)
+def immeuble_color():
+    c = []
+    for i in range(4):
+        c.append((randint(1,255),randint(1,255),randint(1,255)))
+    return c
+
+def initialisation():
+    c = immeuble_color()
+    cartier(-200,-80,c,ins)
+    return None
 
 done()
