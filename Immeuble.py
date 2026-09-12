@@ -38,11 +38,20 @@ def fenetre(x,y):
     carre(x,y,30,30,(255,255,255))
     return None
 
+def porte_fenetre(x,y):
+    carre(x,y,30,50,(255,255,255))
+    return None
+
+def porte(x,y):
+    carre(x,y,30,50,(10,10,10))
+    return None
+
 def etage(x,y,c,ins,i,j):
     carre(x,y,140,60,c)
     for k in range(3):
         if k not in ins[i][j] : fenetre(x+15+40*k,y+20)
-        else:None
+        elif j == 0: porte(x+15+40*k,y)
+        else : porte_fenetre(x+15+40*k,y)
     return None
 
 def immeuble(x,y,c,ins,i):
@@ -66,4 +75,5 @@ def initialisation():
     cartier(-200,-80,c,ins)
     return None
 
+initialisation()
 done()
