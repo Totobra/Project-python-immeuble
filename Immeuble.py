@@ -3,6 +3,7 @@ from random import *
 
 colormode(255)
 hideturtle()
+speed(1000)
 
 def mega_giga_super_ultre_special_tera_kilo_peta_putain_ins():
     ins = []
@@ -11,11 +12,11 @@ def mega_giga_super_ultre_special_tera_kilo_peta_putain_ins():
         for j in range(randint(1,5)):
             tic = []
             if j == 0:
-                tic.append(randint(0,2))
+                tic.append(randint(0,3))
             else:
                 tic = []
                 for i in range(3):
-                    tic.append(randint(0,2))
+                    tic.append(randint(0,3))
             tac.append(tic)    
         ins.append(tac)  
     return ins
