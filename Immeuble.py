@@ -41,6 +41,9 @@ def fenetre(x,y):
 
 def porte_fenetre(x,y):
     carre(x,y,30,50,(255,255,255))
+    carre(x-5,y-5,40,25,"brown")
+    for i in range(4):
+        carre(x+7.5*i,y-2,5,19,(255,255,255))
     return None
 
 def porte(x,y):
@@ -55,9 +58,25 @@ def etage(x,y,c,ins,i,j):
         else : porte_fenetre(x+15+40*k,y)
     return None
 
+def toit(x,y):
+    pensize(5)
+    fillcolor("black")
+    begin_fill()
+    if 0 == randint(0,1):
+        carre(x,y,140,0,(0,0,0))
+    else : 
+        teleport(x,y)
+        goto(x+140,y)
+        goto(x+70,y+30)
+        goto(x,y)
+    end_fill()
+    pensize(0)
+    return None
+
 def immeuble(x,y,c,ins,i):
     for j in range(len(ins[i])):
         etage(x,y+60*j,c,ins,i,j)
+    toit(x,y+len(ins[i])*60)
     return None
 
 def cartier(x,y,c,ins):
