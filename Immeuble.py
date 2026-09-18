@@ -36,8 +36,24 @@ def carre(x,y,w,h,c):
     end_fill()    
     return None
 
-def fenetre(x,y):
-    carre(x,y,30,30,(255,255,255))
+def fenetre(x,y,c=(255,255,255)):
+    if 0 == randint(0,1):
+        carre(x,y,30,30,c)
+    else:
+        fillcolor(c)
+        begin_fill()
+        teleport(x+15,y)
+        circle(15)
+        end_fill()
+        teleport(x,y)
+        begin_fill()
+        goto(x,y+15)
+        penup()
+        goto(x+30,y+15)
+        pendown()
+        goto(x+30,y)
+        goto(x,y)
+        end_fill()
     return None
 
 def porte_fenetre(x,y):
