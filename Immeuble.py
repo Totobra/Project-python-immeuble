@@ -24,7 +24,7 @@ def mega_giga_super_ultre_special_tera_kilo_peta_putain_ins():
 
 ins = mega_giga_super_ultre_special_tera_kilo_peta_putain_ins()
 
-def carre(x,y,w,h,c):
+def rectangle(x,y,w,h,c):
     teleport(x,y)
     fillcolor(c)
     begin_fill()
@@ -38,7 +38,7 @@ def carre(x,y,w,h,c):
 
 def fenetre(x,y,c=(255,255,255)):
     if 0 == randint(0,1):
-        carre(x,y,30,30,c)
+        rectangle(x,y,30,30,c)
     else:
         fillcolor(c)
         begin_fill()
@@ -58,14 +58,14 @@ def fenetre(x,y,c=(255,255,255)):
 
 def porte_fenetre(x,y):
     porte(x,y,(255,255,255))
-    carre(x-5,y-5,40,25,"brown")
+    rectangle(x-5,y-5,40,25,"brown")
     for i in range(4):
-        carre(x+7.5*i,y-2,5,19,(255,255,255))
+        rectangle(x+7.5*i,y-2,5,19,(255,255,255))
     return None
 
 def porte(x,y,c=(10,10,10)):
     if 0 == randint(0,1):
-        carre(x,y,30,50,c)
+        rectangle(x,y,30,50,c)
     else:
         fillcolor(c)
         begin_fill()
@@ -85,7 +85,7 @@ def porte(x,y,c=(10,10,10)):
     return None
 
 def etage(x,y,c,ins,i,j):
-    carre(x,y,140,60,c)
+    rectangle(x,y,140,60,c)
     for k in range(3):
         if k not in ins[i][j] : fenetre(x+15+40*k,y+20)
         elif j == 0: porte(x+15+40*k,y)
@@ -97,7 +97,7 @@ def toit(x,y):
     fillcolor("black")
     begin_fill()
     if 0 == randint(0,1):
-        carre(x,y,140,0,(0,0,0))
+        rectangle(x,y,140,0,(0,0,0))
     else : 
         teleport(x,y)
         goto(x+140,y)
