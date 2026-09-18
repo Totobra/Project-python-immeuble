@@ -79,7 +79,7 @@ def immeuble(x,y,c,ins,i):
     toit(x,y+len(ins[i])*60)
     return None
 
-def cartier(x,y,c,ins):
+def quartier(x,y,c,ins):
     for i in range(4):
         immeuble(x+i*170,y,c[i],ins,i)
     return None
@@ -92,7 +92,7 @@ def immeuble_color():
 
 def initialisation():
     c = immeuble_color()
-    cartier(-200,-80,c,ins)
+    quartier(-200,-80,c,ins)
     return None
 
 initialisation()
