@@ -4,6 +4,7 @@ from random import *
 colormode(255)
 hideturtle()
 speed(1000)
+screensize(900,480)
 
 def mega_giga_super_ultre_special_tera_kilo_peta_putain_ins():
     ins = []
@@ -40,14 +41,31 @@ def fenetre(x,y):
     return None
 
 def porte_fenetre(x,y):
-    carre(x,y,30,50,(255,255,255))
+    porte(x,y,(255,255,255))
     carre(x-5,y-5,40,25,"brown")
     for i in range(4):
         carre(x+7.5*i,y-2,5,19,(255,255,255))
     return None
 
-def porte(x,y):
-    carre(x,y,30,50,(10,10,10))
+def porte(x,y,c=(10,10,10)):
+    if 0 == randint(0,1):
+        carre(x,y,30,50,c)
+    else:
+        fillcolor(c)
+        begin_fill()
+        teleport(x+15,y+25)
+        circle(15)
+        end_fill()
+        teleport(x,y)
+        begin_fill()
+        goto(x,y+40)
+        penup()
+        goto(x+30,y+40)
+        pendown()
+        goto(x+30,y)
+        goto(x,y)
+        end_fill()
+
     return None
 
 def etage(x,y,c,ins,i,j):
@@ -92,8 +110,9 @@ def immeuble_color():
 
 def initialisation():
     c = immeuble_color()
-    quartier(-200,-80,c,ins)
+    quartier(-320,-180,c,ins)
     return None
+
 
 initialisation()
 done()
