@@ -6,7 +6,7 @@ hideturtle()
 speed(1000)
 screensize(900,480)
 
-def mega_giga_super_ultre_special_tera_kilo_peta_putain_ins():
+def mega_giga_super_ultre_special_tera_kilo_peta_fantastique_legendaire_cosmique_galactique_infini_absolu_supreme_mythique_divin_titanesque_colossal_cataclysmique_universel_sideral_apocalyptique_ins():
     ins = []
     for i in range(4):
         tac = []
@@ -22,7 +22,7 @@ def mega_giga_super_ultre_special_tera_kilo_peta_putain_ins():
         ins.append(tac)  
     return ins
 
-ins = mega_giga_super_ultre_special_tera_kilo_peta_putain_ins()
+ins = mega_giga_super_ultre_special_tera_kilo_peta_fantastique_legendaire_cosmique_galactique_infini_absolu_supreme_mythique_divin_titanesque_colossal_cataclysmique_universel_sideral_apocalyptique_ins()
 
 def rectangle(x,y,w,h,c):
     teleport(x,y)
@@ -84,6 +84,11 @@ def porte(x,y,c=(10,10,10)):
 
     return None
 
+def cheminée(x,y):
+    rectangle(x+10,y,5,12,(255,0,0))
+    rectangle(x+8,y+12,9,5,(255,0,0))
+    return None
+
 def etage(x,y,c,ins,i,j):
     rectangle(x,y,140,60,c)
     for k in range(3):
@@ -93,6 +98,7 @@ def etage(x,y,c,ins,i,j):
     return None
 
 def toit(x,y):
+    cheminée(x,y)
     pensize(5)
     fillcolor("black")
     begin_fill()
