@@ -69,7 +69,9 @@ def porte_fenetre(x,y):
         rectangle(x+7.5*i,y-2,5,19,(255,255,255))
     return None
 
-def porte(x,y,c=(10,10,10)):
+def porte(x,y,c=None):
+    if c == None :
+        c = color_rd()
     if 0 == randint(0,1):
         rectangle(x,y,30,50,c)
     else:
@@ -130,10 +132,13 @@ def quartier(x,y,c,ins):
         immeuble(x+i*170,y,c[i],ins,i)
     return None
 
+def color_rd():
+    return (randint(1,255),randint(1,255),randint(1,255))
+    
 def immeuble_color():
     c = []
     for i in range(4):
-        c.append((randint(1,255),randint(1,255),randint(1,255)))
+        c.append(color_rd())
     return c
 
 def initialisation():
@@ -141,6 +146,6 @@ def initialisation():
     quartier(-320,-180,c,ins)
     return None
 
-
+rectangle(-350,-180,710,0,(0,0,0))
 initialisation()
 done()
