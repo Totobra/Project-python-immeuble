@@ -13,7 +13,7 @@ def mega_giga_super_ultre_special_tera_kilo_peta_fantastique_legendaire_cosmique
         for j in range(randint(1,5)):
             tic = []
             if j == 0:
-                tic.append(randint(0,3))
+                tic.append(randint(0,2))
             else:
                 tic = []
                 for i in range(3):
@@ -39,7 +39,7 @@ def rectangle(x,y,w,h,c):
 def fenetre(x,y,c=(255,255,255)):
     if 0 == randint(0,1):
         rectangle(x,y,30,30,c)
-    else:
+    elif 0 == randint(0,1):
         fillcolor(c)
         begin_fill()
         teleport(x+15,y)
@@ -53,6 +53,12 @@ def fenetre(x,y,c=(255,255,255)):
         pendown()
         goto(x+30,y)
         goto(x,y)
+        end_fill()
+    else:
+        teleport(x+15,y)
+        fillcolor(c)
+        begin_fill()
+        circle(15)
         end_fill()
     return None
 
