@@ -132,8 +132,7 @@ def quartier(x,y,c,ins):
         immeuble(x+i*170,y,c[i],ins,i)
     return None
 
-def color_rd():
-    return (randint(1,255),randint(1,255),randint(1,255))
+def color_rd(): return (randint(1,255),randint(1,255),randint(1,255))
     
 def immeuble_color():
     c = []
